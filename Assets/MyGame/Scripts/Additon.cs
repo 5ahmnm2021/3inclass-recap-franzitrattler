@@ -6,49 +6,43 @@ using UnityEngine.UI;
 public class Additon : MonoBehaviour
 {
 
-    public InputField if1String;
-    public InputField if2String;
+    public InputField Zahl1;
+    public InputField Zahl2;
     public Text ergebnis;
+
+    public float Zahl1float;
+    public float Zahl2float;
 
 
     public void Addition()
     {
+        try
+        {
+            Zahl1float = float.Parse(Zahl1.text);
+            Zahl1.image.color = new Color32(255, 255, 255, 255); 
+        }
+        catch (System.Exception)
+        {
+            Zahl1.image.color = new Color32(255, 0, 0, 255);
+            Zahl1.text = "Enter a valid number"; 
+        }
+        try
+        {
+            Zahl2float = float.Parse(Zahl2.text);
+            Zahl2.image.color = new Color32(255, 255, 255, 255);
+        }
+        catch (System.Exception)
+        {
+            Zahl2.image.color = new Color32(255, 0, 0, 255);
+            Zahl2.text = "Enter a valid number";
+        }
        
-        //String check 1
-        string strnInput = if1String.text;
-
-        int result = 0;
-
-        if(int.TryParse(strnInput, out result))
-        {
-
-        }
-        else
-        {
-            if1String.text = "Enter a valid number!";
-            if1String.image.color = Color.red; 
-        }
-
-
-        //String check 2
-        string strnInput2 = if1String.text;
-
-        int result2 = 0;
-
-        if (int.TryParse(strnInput2, out result2))
-        {
-           
-        }
-        else
-        {
-            if2String.text = "Enter a valid number!";
-            if2String.image.color = Color.red;
-        }
 
         //Additon
-        int if1Int = int.Parse(if1String.text);
-        int if2Int = int.Parse(if2String.text);
-        int ergebnisInt = if1Int + if2Int;
+      //  int if1Int = int.Parse(Zahl1.text);
+      //  int if2Int = int.Parse(Zahl2.text);
+        
+        float ergebnisInt = Zahl1float + Zahl2float;
         ergebnis.text = ergebnisInt.ToString();
     }
 }
