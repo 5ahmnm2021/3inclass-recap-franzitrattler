@@ -6,52 +6,53 @@ using UnityEngine.UI;
 public class Additon : MonoBehaviour
 {
 
-    public InputField Zahl1;
-    public InputField Zahl2;
-    public Text ergebnis;
-
-    public float Zahl1float;
-    public float Zahl2float;
-
-    public bool bool1 = true;
-    public bool bool2 = true; 
+    public InputField zahl1;
+    public InputField zahl2;
+    public Text ergebnisText;
+    bool bool1 = true;
+    bool bool2 = true; 
 
 
     public void Addition()
     {
+        float zahl1float = 0;
+        float zahl2float = 0;
+        float ergebnisFloat = 0; 
+        string fehlerTxt = "Enter a valid number";
+
         try
         {
-            Zahl1float = float.Parse(Zahl1.text);
-            Zahl1.image.color = new Color32(255, 255, 255, 255);
+            zahl1float = float.Parse(zahl1.text);
+            zahl1.image.color = Color.white;
             bool1 = true;
         }
         catch (System.Exception)
         {
-            Zahl1.image.color = new Color32(255, 0, 0, 255);
-            Zahl1.text = "Enter a valid number";
+            zahl1.image.color = Color.red;
+            zahl1.text = fehlerTxt;
             bool1 = false; 
         }
         try
         {
-            Zahl2float = float.Parse(Zahl2.text);
-            Zahl2.image.color = new Color32(255, 255, 255, 255);
+            zahl2float = float.Parse(zahl2.text);
+            zahl2.image.color = Color.white;
             bool2 = true;
         }
         catch (System.Exception)
         {
-            Zahl2.image.color = new Color32(255, 0, 0, 255);
-            Zahl2.text = "Enter a valid number";
+            zahl2.image.color = Color.red;
+            zahl2.text = fehlerTxt;
             bool2 = false;
         }
        
         if(bool1 == true && bool2 == true)
         {
-            float ergebnisInt = Zahl1float + Zahl2float;
-            ergebnis.text = ergebnisInt.ToString();
+            ergebnisFloat = zahl1float + zahl2float;
+            ergebnisText.text = ergebnisFloat.ToString();
         }
         else
         {
-            ergebnis.text = "Da kann ich leider nicht berechnen"; 
+            ergebnisText.text = "Da kann ich leider nicht berechnen"; 
         }
     }
 }

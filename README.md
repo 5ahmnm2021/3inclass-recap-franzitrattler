@@ -20,12 +20,13 @@ Install Unity, open Unity Hub
 None
 
 ### Project state: 
-35%
+100%
 
 ### Limitations: 
 
+
 ### Lessons Learned: 
 
-Unity UI Basics, repeating Git Hub 
+Unity UI Basics, repeating Git Hub, Switch Scene Funktion, Randomizer, try/catch
 
 Copyright by Franziska Trattler :)

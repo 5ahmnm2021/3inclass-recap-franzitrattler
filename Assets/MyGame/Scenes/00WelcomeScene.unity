@@ -388,10 +388,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1929091362}
-        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
-        m_MethodName: 
-        m_Mode: 5
+      - m_Target: {fileID: 1929091364}
+        m_TargetAssemblyTypeName: Controller, Assembly-CSharp
+        m_MethodName: ChangeScene
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -655,7 +655,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: ' Hello Sommersemeser 21
 
-    Franziska Trattler'
+    franzitrattler'
 --- !u!222 &834385550
 CanvasRenderer:
   m_ObjectHideFlags: 0
